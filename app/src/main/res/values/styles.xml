@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="cornerRadius" parent ="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20sp</item>
+    </style>
+
+    <style name="cornerRadiusCard" parent ="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10sp</item>
+    </style>
+
+</resources>

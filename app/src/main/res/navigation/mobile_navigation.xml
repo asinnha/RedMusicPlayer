@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/all_tracks">
+
+    <fragment
+        android:id="@+id/all_tracks"
+        android:name="com.example.red_musicplayer.ui.tracks.TracksFragments"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_track" >
+        <action
+            android:id="@+id/action_all_tracks_to_albums"
+            app:destination="@id/albums" />
+        <action
+            android:id="@+id/action_all_tracks_to_playlists"
+            app:destination="@id/playlists" />
+        <action
+            android:id="@+id/action_all_tracks_to_musicPlayer"
+            app:destination="@id/musicPlayer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/albums"
+        android:name="com.example.red_musicplayer.ui.albums.AlbumFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_album" >
+        <action
+            android:id="@+id/action_albums_to_all_tracks"
+            app:destination="@id/all_tracks" />
+        <action
+            android:id="@+id/action_albums_to_playlists"
+            app:destination="@id/playlists" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/playlists"
+        android:name="com.example.red_musicplayer.ui.playlists.PlaylistFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_playlist" >
+        <action
+            android:id="@+id/action_playlists_to_all_tracks"
+            app:destination="@id/all_tracks" />
+        <action
+            android:id="@+id/action_playlists_to_albums"
+            app:destination="@id/albums" />
+    </fragment>
+    <fragment
+        android:id="@+id/musicPlayer"
+        android:name="com.example.red_musicplayer.ui.music_pages.Player"
+        android:label="fragment_music_player"
+        tools:layout="@layout/fragment_player" />
+</navigation>
